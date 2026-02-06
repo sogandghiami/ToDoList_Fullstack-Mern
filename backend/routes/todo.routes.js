@@ -39,7 +39,7 @@ router.patch("/:id",async(req,res) =>{
             todo.completed = req.body.completed
         }
         const updatedTodo = await todo.save()
-        res.json(updateTodo)
+        res.json(updatedTodo)
     } catch (error) {
         res.status(400).json({message: error.message})
     }
